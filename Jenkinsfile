@@ -7,6 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+		 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
 		sh 'node --version'
                 sh 'npm --version'
 		sh 'npm run build'

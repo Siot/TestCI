@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        docker { image 'node' }
+        docker {
+            image 'node'
+            label 'agent-template'
+        }
     }
 
     stages {
